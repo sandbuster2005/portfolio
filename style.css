@@ -5,7 +5,12 @@
     --accent: #8eb7ff;
     --chip: #1c2430;
     --line: #2c3644;
+    --link: #0000ff;
 }
+
+
+
+
 
 * {
     box-sizing: border-box;
@@ -14,7 +19,7 @@
 body {
     margin: 0;
     min-height: 100vh;
-    padding: 3.5rem 1.5rem 2.5rem;
+    padding: 3rem 1.5rem 2.5rem;
     background:
         radial-gradient(900px 420px at 0% -10%, #042B65 20%, transparent 60%),
         var(--bg);
@@ -29,6 +34,30 @@ footer {
     max-width: 38rem;
     margin-inline: auto;
 }
+
+.nav ul {
+    list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 0.5rem;
+
+
+}
+
+.nav a {
+   color: var(--link);
+   text-decoration: none;
+   padding: 14px 16px;
+   border: 1px solid var(--line);
+   border-radius: 30px;
+   background: var(--chip);
+}
+
+.nav a:hover{
+    background-color: var(--bg);
+}
+
 
 h1 {
     margin: 0;
@@ -80,31 +109,46 @@ p {
     margin: 0;
     padding: 0;
     list-style: none;
-
 }
 
-.links li {
-    padding: 0.35rem 0.75rem;
-    background: var(--chip);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-
+.links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
 }
+
+.links a {
+   color: var(--link);
+   text-decoration: none;
+   padding: 8px 10px;
+   border: 1px solid var(--line);
+   border-radius: 30px;
+   background: var(--chip);
+}
+
+.links a:hover{
+    background-color:var(--bg);
+}
+
 
 .free {
-    flex-wrap: wrap;
-    list-style-position: inside;
+    display: flex;
+    flex-wrap: nowrap;
     gap: 0.5rem;
     margin: 0;
     padding: 0;
 
+
 }
 
 .free li {
-    padding: 0.35rem 0.75rem;
+    padding: 0.35rem 0.7rem;
     background: var(--chip);
     border: 1px solid var(--line);
     border-radius: 999px;
+    list-style: none;
 
 }
 
@@ -123,4 +167,17 @@ footer {
     border-top: 1px solid var(--line);
     color: var(--muted);
     font-size: 0.9rem;
+}
+
+.url a{
+    color: var(--link);
+    text-decoration: none;
+    padding: 2px 5px;
+}
+
+.url a:hover{
+    background-color: var(--bg);
+    border-radius: 30px;
+    padding: 2px 4px;
+    border: 1px solid var(--line);
 }
