@@ -31,9 +31,13 @@ body {
 header,
 main,
 footer {
-    max-width: 38rem;
+    max-width: 50rem;
     margin-inline: auto;
 }
+
+
+
+
 
 .nav ul {
     list-style-type: none;
@@ -58,6 +62,15 @@ footer {
     background-color: var(--bg);
 }
 
+.nav .active{
+    background-color: var(--bg);
+    border: 1px solid var(--bg);
+    color: var(--muted);
+    pointer-events: none; /*remove the possibility to click current page  */
+    cursor: default; /* remove change of cursor */
+}
+
+
 
 h1 {
     margin: 0;
@@ -76,8 +89,9 @@ h1 {
 h2 {
     margin: 2.2rem 0 0.7rem;
     color: var(--accent);
-    font-size: 0.78rem;
+    font-size: 1rem;
     font-weight: 600;
+    font-style: italic;
     letter-spacing: 0.16em;
     text-transform: uppercase;
 }
@@ -149,16 +163,15 @@ p {
     border: 1px solid var(--line);
     border-radius: 999px;
     list-style: none;
+    margin-top: 0.20rem;
 
 }
 
-ol {
+.free ol{
     margin: 0;
-    padding-left: 1.25rem;
-}
 
-ol li + li {
-    margin-top: 0.35rem;
+    padding-left: 0rem;
+
 }
 
 footer {
@@ -180,4 +193,46 @@ footer {
     border-radius: 30px;
     padding: 2px 4px;
     border: 1px solid var(--line);
+}
+
+.learn table{
+    border-collapse: separate;
+    width: 95%;
+}
+
+.learn th, td{
+    padding: 8px 4px;
+    text-align: center;
+
+
+}
+
+.learn td{
+    border-collapse: collapse;
+    background-color: var(--chip);
+    border-radius: 10px;
+}
+
+
+.learn th {
+    background-color: var(--line);
+    color: white;
+    border-radius: 10px;
+}
+
+
+
+
+.learn caption {
+    font-weight: bold;
+    margin-inline: auto;
+}
+
+
+
+
+.learn tfoot td {
+    font-style: italic;
+    color: white;
+    background-color: var(--bg);
 }
